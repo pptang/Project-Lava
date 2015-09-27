@@ -42,9 +42,14 @@ public class CitiApplication extends Application {
 
     public static void setToken(String token) {
         if (token.length() != 0) {
-            myToken = token;
+            StringBuilder builder = new StringBuilder();
+            builder.append("Bearer ");
+            builder.append(token);
+            myToken = builder.toString();
         }
     }
+
+
 
 
 }

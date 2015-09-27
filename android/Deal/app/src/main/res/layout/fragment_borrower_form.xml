@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.money.lava.deal.view.BorrowerFormFragment">
+
+    <TextView android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="15dp"
+        android:text="借款單"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+    <View android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvTitle"
+        android:background="@android:color/darker_gray"
+        android:layout_margin="15dp"
+        />
+
+    <TextView android:id="@+id/tvSSN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_margin="15dp"
+        android:text="身分證字號"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView android:id="@+id/tvPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSSN"
+        android:layout_margin="15dp"
+        android:text="借款期間"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView android:id="@+id/tvMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPeriod"
+        android:layout_margin="15dp"
+        android:text="還款方式"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView android:id="@+id/tvPurpose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMethod"
+        android:layout_margin="15dp"
+        android:text="貸款用途"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/circular_bg"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:text="Lend Money"/>
+
+
+</RelativeLayout>

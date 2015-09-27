@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.money.lava.deal.view.WelcomeFragment">
+
+
+
+    <View android:id="@+id/midLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_centerInParent="true"/>
+
+    <TextView android:id="@+id/tvLendTitle"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:background="@drawable/circular_bg"
+        android:text="Lend Money"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:gravity="center"
+        android:layout_above="@+id/midLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView android:id="@+id/tvBorrowTitle"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:background="@drawable/circular_bg"
+        android:text="Borrow Money"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/midLine"
+        android:layout_centerHorizontal="true"
+         />
+
+</RelativeLayout>

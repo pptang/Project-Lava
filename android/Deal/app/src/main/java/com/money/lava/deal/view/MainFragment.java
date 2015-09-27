@@ -1,35 +1,32 @@
 package com.money.lava.deal.view;
 
-import android.support.v4.app.Fragment;
+
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
 
 import com.money.lava.deal.R;
-import com.money.lava.deal.alert.Alert;
-import com.money.lava.deal.application.CitiApplication;
-import com.money.lava.deal.config.Config;
-import com.money.lava.deal.logger.Dump;
-import com.money.lava.deal.model.Login.Auth;
-import com.money.lava.deal.model.Login.User;
-import com.money.lava.deal.model.account.UserAccount;
-
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
+import com.money.lava.deal.adapter.MainTabAdapter;
 
 public class MainFragment extends Fragment {
 
-    private Button btnClick;
 
     public MainFragment() {
+        // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         findWidgets(view);
@@ -38,59 +35,19 @@ public class MainFragment extends Fragment {
     }
 
     private void findWidgets(View view) {
-        Button btnLogin = (Button) view.findViewById(R.id.login);
-        btnLogin.setOnClickListener(v -> onLogin(v));
 
-        Button btnGetAccountInfo = (Button) view.findViewById(R.id.getAccountInfo);
-        btnGetAccountInfo.setOnClickListener(v -> onGetAccountInfo(v));
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+        viewPager.setAdapter(new MainTabAdapter(getChildFragmentManager(), getActivity()));
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
+        tabLayout.post(() -> tabLayout.setupWithViewPager(viewPager));
+
+
     }
 
-    public void onLogin(View view) {
-        Runnable loginTask = () -> {
-            User user = new User("impatiencesnuffle", "mooBi8jais");
-            CitiApplication.getCitiService().userLogin(user, Config.CLIENT_ID, new Callback<Auth>() {
-                @Override
-                public void success(Auth auth, Response response) {
-                    Alert.show(getActivity(), "Hello:" + auth.getUsername());
-                    if (auth.getToken() != null) {
-                        CitiApplication.setToken(auth.getToken());
-                    }
-                }
 
-                @Override
-                public void failure(RetrofitError error) {
-                    Dump.e(error.toString());
-
-                }
-            });
-        };
-
-        Thread thread = new Thread(loginTask);
-        thread.start();
-    }
-
-    public void onGetAccountInfo(View view) {
-        Runnable getAccountInfoTask = () -> {
-            Dump.e(CitiApplication.getToken());
-            CitiApplication.getCitiService().getUserAccountInfo(CitiApplication.getToken(),
-                    Config.CLIENT_ID, new Callback<UserAccount>() {
-
-                        @Override
-                        public void success(UserAccount userAccount, Response response) {
-                            Alert.show(getActivity(), userAccount.getAccountStatus());
-
-                        }
-
-                        @Override
-                        public void failure(RetrofitError error) {
-                            Dump.e(error.toString());
-
-                        }
-
-                    });
-        };
-
-        Thread thread = new Thread(getAccountInfoTask);
-        thread.start();
-    }
 }
