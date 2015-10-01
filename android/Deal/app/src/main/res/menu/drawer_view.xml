@@ -4,10 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
+            android:checked="true"
             android:title="Home"/>
         <item
-            android:id="@+id/nav_profile"
-            android:title="Profile" />
+            android:id="@+id/nav_borrow"
+            android:title="Borrow" />
+        <item
+            android:id="@+id/nav_lend"
+            android:title="Lend" />
+
+        <item
+            android:id="@+id/nav_deal"
+            android:title="My Deal" />
+
     </group>
 
 </menu>

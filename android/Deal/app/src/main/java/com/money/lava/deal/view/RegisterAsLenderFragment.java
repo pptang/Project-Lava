@@ -2,19 +2,16 @@ package com.money.lava.deal.view;
 
 
 import android.os.Bundle;
-import android.app.Fragment;
-import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 
 import com.money.lava.deal.R;
 
-public class BorrowerFormFragment extends DialogFragment {
+public class RegisterAsLenderFragment extends Fragment {
 
-
-    public BorrowerFormFragment() {
+    public RegisterAsLenderFragment() {
         // Required empty public constructor
     }
 
@@ -22,12 +19,15 @@ public class BorrowerFormFragment extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_borrower_form, container, false);
+        View view = inflater.inflate(R.layout.fragment_register_as_lender, container, false);
 
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        findWidgets(view);
 
         return view;
     }
 
+    private void findWidgets(View view) {
+
+    }
 
 }

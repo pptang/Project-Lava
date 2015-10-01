@@ -1,19 +1,18 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.money.lava.deal.view.BorrowerFormFragment">
+        >
 
         <TextView android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_margin="15dp"
-            android:text="借款單"
+            android:text="Register as a lender"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
         <View android:id="@+id/line"
@@ -51,7 +50,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         </LinearLayout>
-        <LinearLayout android:id="@+id/ll_period"
+        <LinearLayout android:id="@+id/ll_finance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -61,49 +60,68 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="借款期間"
+                android:text="預期可投資金額："
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50萬以內" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="51~100萬" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="101~200萬" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="201~500萬以內" />
 
         </LinearLayout>
-
-        <LinearLayout android:id="@+id/ll_method"
+        <LinearLayout android:id="@+id/ll_source"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:layout_below="@id/ll_period"
+            android:layout_below="@id/ll_finance"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="還款方式"
+                android:text="投資資金來源："
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="定期定額" />
+                android:text="薪水" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="一次償還" />
+                android:text="退休金" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="閒置資金" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他基金公司轉入" />
 
         </LinearLayout>
-
-        <LinearLayout android:id="@+id/ll_purpose"
+        <LinearLayout android:id="@+id/ll_invest_tool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:layout_below="@id/ll_method"
+            android:layout_below="@id/ll_source"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="貸款用途"
+                android:text="常使用的投資理財工具"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
             <CheckBox
                 android:layout_width="wrap_content"
@@ -161,6 +179,5 @@
                 android:gravity="center"
                 android:text="下一步"/>
         </LinearLayout>
-
     </RelativeLayout>
 </ScrollView>

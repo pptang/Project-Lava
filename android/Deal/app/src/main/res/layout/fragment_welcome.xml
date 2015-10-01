@@ -6,12 +6,31 @@
     tools:context="com.money.lava.deal.view.WelcomeFragment">
 
 
-
-    <View android:id="@+id/midLine"
+    <LinearLayout android:id="@+id/midLine"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        android:layout_centerInParent="true"/>
+        android:layout_height="40dp"
+        android:background="?attr/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <TextView android:id="@+id/tvRegisterLender"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Register as a lender"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+        <TextView android:id="@+id/tvRegisterBorrower"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Register as a borrower"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
 
     <TextView android:id="@+id/tvLendTitle"
         android:layout_width="175dp"

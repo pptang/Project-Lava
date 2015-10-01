@@ -1,19 +1,18 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.money.lava.deal.view.BorrowerFormFragment">
+        >
 
         <TextView android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_margin="15dp"
-            android:text="借款單"
+            android:text="Register as a borrower"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
         <View android:id="@+id/line"
@@ -161,6 +160,5 @@
                 android:gravity="center"
                 android:text="下一步"/>
         </LinearLayout>
-
     </RelativeLayout>
 </ScrollView>

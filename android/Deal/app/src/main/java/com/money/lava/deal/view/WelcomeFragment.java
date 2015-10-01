@@ -51,6 +51,26 @@ public class WelcomeFragment extends Fragment {
                     .commit();
         });
 
+        TextView tvRegisterAsLender = (TextView) v.findViewById(R.id.tvRegisterLender);
+        TextView tvRegisterAsBorrower = (TextView) v.findViewById(R.id.tvRegisterBorrower);
+
+        tvRegisterAsLender.setOnClickListener(view -> {
+           RegisterAsLenderFragment registerAsLenderFragment = new RegisterAsLenderFragment();
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.main_container, registerAsLenderFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+        tvRegisterAsBorrower.setOnClickListener(view -> {
+            RegisterAsBorrowerFragment registerAsBorrowerFragment = new RegisterAsBorrowerFragment();
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.main_container, registerAsBorrowerFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
     }
 
 
