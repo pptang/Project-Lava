@@ -80,7 +80,7 @@ public class LendFragment extends Fragment implements View.OnTouchListener {
             protected void onPreExecute() {
                 super.onPreExecute();
                 dialog = new ProgressDialog(context);
-                dialog.setMessage("資料傳送中");
+                dialog.setMessage("Loading...");
                 dialog.show();
             }
 
@@ -102,8 +102,8 @@ public class LendFragment extends Fragment implements View.OnTouchListener {
 
                 dialog.dismiss();
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setMessage("傳送成功");
-                builder.setPositiveButton("好", (dialog, which) -> {
+                builder.setMessage("Success!");
+                builder.setPositiveButton("OK", (dialog, which) -> {
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_container, new BorrowFragment())
                             .commit();

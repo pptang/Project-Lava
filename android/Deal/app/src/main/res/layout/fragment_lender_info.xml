@@ -1,15 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/rl_container">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
                 android:layout_height="1dp"
                 android:layout_below="@id/tvTitle"
                 android:background="@android:color/darker_gray"
-                android:layout_margin="15dp"
+                android:layout_margin="5dp"
                 />
 
             <LinearLayout android:id="@+id/ll_profession"
@@ -38,7 +38,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="職業類別："
+                    android:text="Profession："
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 <TextView
@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="5dp"
-                    android:text="資訊業"
+                    android:text="IT Industry"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
             </LinearLayout>
@@ -60,7 +60,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="財務狀況："
+                    android:text="Financial Status："
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 <TextView
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="5dp"
-                    android:text="一百萬以下"
+                    android:text="Below 1 million"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
             </LinearLayout>
@@ -84,7 +84,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="預期可投資金額："
+                    android:text="Expected Investment："
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 <TextView
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="5dp"
-                    android:text="五十萬以下"
+                    android:text="Below 500 Thounsand"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
 
@@ -109,7 +109,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="年齡："
+                    android:text="Age："
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 <TextView
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="5dp"
-                    android:text="50至59歲"
+                    android:text="50~59"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
 
@@ -133,7 +133,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="風險屬性類型："
+                    android:text="Type of Risk："
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 <TextView
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="5dp"
-                    android:text="穩健型"
+                    android:text="Stable"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
 
@@ -157,7 +157,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="希望利率："
+                    android:text="Desired Rate："
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 <TextView

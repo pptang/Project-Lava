@@ -18,6 +18,13 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 />
+            <View android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvName"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="10dp"
+                />
             <TextView android:id="@+id/tvPeriod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -43,6 +50,14 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
         </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Accept"/>
 
     </RelativeLayout>
 

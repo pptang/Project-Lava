@@ -9,20 +9,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_margin="15dp"
-        android:text="貸款單"
+        android:text="Credit Note"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
     <View android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@id/tvTitle"
         android:background="@android:color/darker_gray"
-        android:layout_margin="15dp"
+        android:layout_margin="5dp"
         />
 
     <LinearLayout android:id="@+id/ll_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:layout_below="@id/line"
         android:orientation="horizontal">
 
@@ -30,35 +30,37 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="貸款人："
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
-        <EditText android:id="@+id/etName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"/>
-
+            android:text="Lender"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
-            android:text="先生"
+            android:text="Mr./Mrs."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+        <EditText android:id="@+id/etName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"/>
+
+
 
     </LinearLayout>
 
     <LinearLayout android:id="@+id/ll_amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:layout_below="@id/ll_name"
         android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="新台幣："
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+            android:text="Amount"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
         <EditText android:id="@+id/etAmount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,14 +70,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
-            android:text="元"
+            android:text="NT"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
     </LinearLayout>
 
     <LinearLayout android:id="@+id/ll_rate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:layout_below="@id/ll_amount"
         android:orientation="horizontal"
         >
@@ -83,8 +85,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="利率："
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+            android:text="Rate"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
         <EditText android:id="@+id/etRate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -111,7 +113,7 @@
             android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:gravity="center"
-            android:text="確定"/>
+            android:text="Confirm"/>
     </LinearLayout>
 
 </RelativeLayout>

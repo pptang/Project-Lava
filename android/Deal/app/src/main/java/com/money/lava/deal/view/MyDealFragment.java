@@ -61,12 +61,12 @@ public class MyDealFragment extends Fragment {
 //                LendTable lendTable = new LendTable(context);
 //                lendItems = lendTable.getAll();
 
-                DealInfo info1 = new DealInfo("Bible", "5年1個月", "購置土地", "定期定額", "薪資收入",
-                        "是");
-                DealInfo info2 = new DealInfo("Mark", "半年", "公司週轉", "一次償還", "投資收入",
-                        "否");
-                DealInfo info3 = new DealInfo("Kevin", "4年", "家庭週轉", "定期定額", "執行業務收入",
-                        "是");
+                DealInfo info1 = new DealInfo("Tommy", "2015/10/02~2016/11/04", "Fund Turnover", "Periodic", "Salary",
+                        "Yes");
+                DealInfo info2 = new DealInfo("Mark", "2015/11/19~2018/11/19", "Land Purchase", "Bullet Repayment", "Investment",
+                        "No");
+                DealInfo info3 = new DealInfo("Kevin", "2015/11/19~2015/12/30", "Family Turnover", "Periodic", "Sales",
+                        "Yes");
                 dealInfos.add(info1);
                 dealInfos.add(info2);
                 dealInfos.add(info3);

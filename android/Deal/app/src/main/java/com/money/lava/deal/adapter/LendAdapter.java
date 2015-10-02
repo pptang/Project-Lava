@@ -59,14 +59,14 @@ public class LendAdapter extends RecyclerView.Adapter<LendAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(LendAdapter.ViewHolder holder, int position) {
         LendItem item = lendItems.get(position);
-        holder.tvName.setText("姓名： " + item.getName());
-        holder.tvAmount.setText("金額： " + item.getAmount() + "元");
-        holder.tvRate.setText("利率： " + item.getRate() + "%");
+        holder.tvName.setText("Name： " + item.getName());
+        holder.tvAmount.setText("Amount： " + item.getAmount() + "NT");
+        holder.tvRate.setText("Rate： " + item.getRate() + "%");
         holder.btnBorrow.setOnClickListener(v -> {
             DialogFragment fragment = new BorrowerFormFragment();
             fragment.show(fragmentManager, "fragment_borrower_form");
             holder.btnBorrow.setEnabled(false);
-            holder.btnBorrow.setText("處理中");
+            holder.btnBorrow.setText("Processing");
 
         });
 

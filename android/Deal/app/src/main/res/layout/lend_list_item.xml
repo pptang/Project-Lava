@@ -36,7 +36,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="我要跟他借錢"/>
+            android:text="Borrow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBorrow"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="Stable"/>
     </RelativeLayout>
 
 

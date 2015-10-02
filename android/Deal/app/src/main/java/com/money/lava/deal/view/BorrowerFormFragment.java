@@ -47,7 +47,7 @@ public class BorrowerFormFragment extends DialogFragment implements View.OnTouch
         LinearLayout llConfirm = (LinearLayout) v.findViewById(R.id.llConfirm);
         llConfirm.setOnClickListener(view -> {
             dismiss();
-            Alert.show(getActivity(), "發送成功！請等候Lender回應");
+            Alert.show(getActivity(), "Successfully Sent！Please wait for response！");
 
         });
 

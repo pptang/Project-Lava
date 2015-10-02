@@ -2,11 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
     android:id="@+id/rl_container">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,22 +28,23 @@
                 android:layout_height="1dp"
                 android:layout_below="@id/tvTitle"
                 android:background="@android:color/darker_gray"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 />
-
+            <TextView android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_margin="10dp"
+                android:text="Name:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
             <LinearLayout android:id="@+id/ll_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_below="@id/line"
+                android:layout_margin="5dp"
+                android:layout_below="@id/tvName"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Name:"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -60,7 +63,7 @@
             <LinearLayout android:id="@+id/ll_period"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 android:layout_below="@id/ll_name"
                 android:orientation="vertical">
 
@@ -68,11 +71,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Period"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
                 <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="From"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="From"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -80,6 +84,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
                     android:text="To"/>
                 <EditText
                     android:layout_width="match_parent"
@@ -91,7 +96,7 @@
             <LinearLayout android:id="@+id/ll_method"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 android:layout_below="@id/ll_period"
                 android:orientation="vertical">
 
@@ -99,71 +104,71 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Methods of Repaying Loan"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Perioditic" />
+                    android:text="Periodic Repayment Plan" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="一次償還" />
+                    android:text="Bullet Repayment" />
 
             </LinearLayout>
 
             <LinearLayout android:id="@+id/ll_purpose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 android:layout_below="@id/ll_method"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="貸款用途"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    android:text="Purpose"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="新台幣存款" />
+                    android:text="Deposit" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="股票" />
+                    android:text="Stock" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="債卷" />
+                    android:text="Bond" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="互助會" />
+                    android:text="Rotating Savings and Credit Association" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="保險" />
+                    android:text="Insurance" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="不動產" />
+                    android:text="Real Estate" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="外幣存款" />
+                    android:text="Deposit in Foriegn Currency" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="基金" />
+                    android:text="Fund" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="期貨權證" />
+                    android:text="Future Warranty" />
 
             </LinearLayout>
 
