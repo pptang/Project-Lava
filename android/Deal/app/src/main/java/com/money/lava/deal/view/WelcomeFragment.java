@@ -23,7 +23,7 @@ public class WelcomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_welcome, container, false);
-
+        getActivity().setTitle("Welcome");
         findWidgets(view);
 
         return view;

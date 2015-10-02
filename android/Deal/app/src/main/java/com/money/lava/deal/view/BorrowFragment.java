@@ -38,6 +38,7 @@ public class BorrowFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_borrow, container, false);
 
         context = getActivity();
+        getActivity().setTitle("Borrow");
         EventBus.getDefault().register(this);
 
         findWidgets(view);

@@ -95,6 +95,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                return false;
+            }
+        });
         navigationView.setNavigationItemSelectedListener(
                 menuItem -> {
                     Fragment fragment = null;
@@ -116,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
                     if (fragment != null) {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.main_container, fragment)
+                                .addToBackStack(null)
                                 .commit();
                         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
                     }

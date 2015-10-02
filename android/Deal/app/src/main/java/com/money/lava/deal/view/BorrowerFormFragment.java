@@ -1,17 +1,26 @@
 package com.money.lava.deal.view;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.money.lava.deal.R;
+import com.money.lava.deal.alert.Alert;
 
-public class BorrowerFormFragment extends DialogFragment {
+import org.w3c.dom.Text;
+
+public class BorrowerFormFragment extends DialogFragment implements View.OnTouchListener {
 
 
     public BorrowerFormFragment() {
@@ -26,8 +35,29 @@ public class BorrowerFormFragment extends DialogFragment {
 
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
+        findWidgets(view);
+
         return view;
     }
 
+    private void findWidgets(View v) {
+        RelativeLayout rlContainer = (RelativeLayout) v.findViewById(R.id.rl_container);
+        rlContainer.setOnTouchListener(this);
 
+        LinearLayout llConfirm = (LinearLayout) v.findViewById(R.id.llConfirm);
+        llConfirm.setOnClickListener(view -> {
+            dismiss();
+            Alert.show(getActivity(), "發送成功！請等候Lender回應");
+
+        });
+
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+
+        InputMethodManager im = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        im.hideSoftInputFromInputMethod(v.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        return false;
+    }
 }

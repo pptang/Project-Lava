@@ -33,9 +33,10 @@ public class MyDealFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_my_deal, container, false);
         context = getActivity();
+        getActivity().setTitle("My Deal");
         findWidgets(view);
         getMyDeals();
         return view;
@@ -60,11 +61,11 @@ public class MyDealFragment extends Fragment {
 //                LendTable lendTable = new LendTable(context);
 //                lendItems = lendTable.getAll();
 
-                DealInfo info1 = new DealInfo("唐百博", "5年1個月", "購置土地", "定期定額", "薪資收入",
+                DealInfo info1 = new DealInfo("Bible", "5年1個月", "購置土地", "定期定額", "薪資收入",
                         "是");
-                DealInfo info2 = new DealInfo("劉宗宏", "半年", "公司週轉", "一次償還", "投資收入",
+                DealInfo info2 = new DealInfo("Mark", "半年", "公司週轉", "一次償還", "投資收入",
                         "否");
-                DealInfo info3 = new DealInfo("林渤越", "4年", "家庭週轉", "定期定額", "執行業務收入",
+                DealInfo info3 = new DealInfo("Kevin", "4年", "家庭週轉", "定期定額", "執行業務收入",
                         "是");
                 dealInfos.add(info1);
                 dealInfos.add(info2);

@@ -50,7 +50,7 @@ public class LendFragment extends Fragment implements View.OnTouchListener {
         View view = inflater.inflate(R.layout.fragment_lend, container, false);
 
         context = getActivity();
-
+        getActivity().setTitle("Lend");
         findWidgets(view);
 
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
@@ -71,6 +71,7 @@ public class LendFragment extends Fragment implements View.OnTouchListener {
     }
 
     private void insertIntoLendTable(String name, String amount, String rate) {
+
         new AsyncTask<Void, Void, LendItem>() {
 
             ProgressDialog dialog;
@@ -102,7 +103,11 @@ public class LendFragment extends Fragment implements View.OnTouchListener {
                 dialog.dismiss();
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setMessage("傳送成功");
-                builder.setPositiveButton("好", (dialog, which) -> {});
+                builder.setPositiveButton("好", (dialog, which) -> {
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.main_container, new BorrowFragment())
+                            .commit();
+                });
                 builder.show();
 
             }
