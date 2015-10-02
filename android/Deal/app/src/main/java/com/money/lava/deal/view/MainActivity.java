@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.main_container, fragment)
                                 .commit();
+                        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
                     }
                     menuItem.setChecked(true);
                     mDrawerLayout.closeDrawers();
